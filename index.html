@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Form</title>
+ 
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Great+Vibes&family=Jacques+Francois+Shadow&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Sacramento&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Jacques+Francois+Shadow&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="backdrop"></div>
+  <main class="content-wrapper">
+      <aside class="aside">
+
+         
+     
+        <div class="logo">
+          <h1>Serendifity</h1>
+        </div>
+      </aside>
+    
+    <section class="section">
+      <div class="introduction">
+        <p><span style = "font-weight: bold; font-size:2rem; font-style: italic;">Welcome to Serendifity</span>- a place where spontaneous adventures and unforgettable journeys come to life. Whether you're seasoned traveler or just starting your exploration, <span>Serendifity</span> is your personal travel diary, capturing moments of unexpected beauty from around the world. Discover hidden gems, share your own stories, and get inspired to embark on your next serendipitous journey.</p>
+    
+        <p>Feel free to tweak it to match your style or add more specific details!</p>
+      </div>
+      
+      <div class="form-display">
+        <h3 style="padding-bottom: 15px;">Sign up</h3>
+        <form class="form">
+          <div class="form-group">
+            <label for="fname">First name</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Philip" required>
+            <div class="error-message" id="fname-error"></div> <!-- Error message for first name -->
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Morrison" required>
+            <div class="error-message" id="lname-error"></div> <!-- Error message for last name -->
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="yours@gmail.com" required>
+            <div class="error-message" id="email-error"></div> <!-- Error message for email -->
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+            <div class="error-message" id="phone-error"></div> <!-- Error message for phone -->
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label><br>
+            <input type="password" id="pass1" name="pass" maxlength="12" required>
+            <div class="error-message" id="pass1-error"></div> <!-- Error message for password -->
+          </div>
+          <div class="form-group">
+            <label for="pass">Confirm password</label><br>
+            <input type="password" id="pass2" name="pass" maxlength="12" required>
+            <div class="error-message" id="pass2-error"></div> <!-- Error message for confirm password -->
+          </div>
+        </form>
+
+      </div>
+      <div class="create-account">
+        <button type="button" class="button" id="createAccountBtn">Create Account</button>
+        <h4 style="font-style: italic; font-size: 1.5rem;">Already have an account? 
+          <a href="#" id="login-link" style="font-style: normal; text-decoration: none; color: inherit;"><span> Log in</span></a></h4>
+      </div>
+      <footer>
+        <p>2024 @ Minji Kim</p>
+      </footer>
+    </section>
+
+   
+  </main>
+
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Account Created Successfully!</h2><br>
+      <p>Welcome to Serendifity. Your journey begins now!</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

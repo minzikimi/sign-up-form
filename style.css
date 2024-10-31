@@ -1,0 +1,255 @@
+*{
+  box-sizing: border-box;
+  font-family: "Gowun Batang", serif;
+  margin:0;
+}
+
+body{
+  position:relative;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.content-wrapper{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aside {
+  position: relative;
+  overflow: hidden;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("brown-green-leafed-forest-night-time.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.logo {
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding-right: 40px;
+}
+
+.logo > h1 {
+  color: #f5ededaf; 
+  font-size: 6.5rem; 
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); 
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo > h1::first-letter {
+  font-size: 200%;
+}
+
+.section {
+  width: 60vw;
+  height: 100vh;
+  padding-top: 60px;
+  overflow-y: auto; 
+  background-color:#1B1212;
+  font-weight: 400;
+  color:rgb(83, 83, 83);
+  display: flex;
+  flex-direction: column;
+}
+
+.section > * {
+  padding-left: 70px;
+}
+
+.introduction{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  padding-bottom: 40px;
+  line-height: 30px;
+  max-width: 80%;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: max-content;
+  font-size: 1.3rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.form-display{
+  font-size: 2rem;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  height: 400px; 
+  width: 80%;
+  color:rgba(255, 255, 255, 0.76);
+  gap:5px;
+
+}
+
+
+
+input  {
+  width: 60%;
+  height: 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: 2px solid rgb(173, 40, 40);
+  box-shadow: 0 0 5px rgba(133, 133, 133, 0.5);
+}
+
+.form-group{
+  height: 100px;
+}
+
+.create-account {
+ padding-bottom: 30px;
+}
+
+.create-account >h4 {
+  padding-top:30px;
+}
+
+.button{
+  padding:15px;
+  border-radius: 10px;
+  border : none;
+  color : white;
+  background-color: rgb(133, 133, 133);
+  font-size: 1.3rem;
+  width: 250px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #f0eeeb;
+  cursor: pointer;
+  color:#1B1212;
+}
+
+#login-link span{
+  color:rgba(255, 255, 255, 0.76);
+}
+
+footer {
+  display: flex;
+  font-size:1rem;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: end}
+
+
+.modal{
+  position:absolute;
+  z-index: 100;
+  width: 40%;
+  top: 30vh;
+  left: 30%;
+  }
+
+.modal.visible {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  text-align: center;
+  width: 800px;
+  height: 300px;
+  display: none;
+  font-size: 1.5rem;
+}
+
+.modal-content.visible {
+  display: block;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+.error-message {
+  color: rgb(173, 40, 40);
+  font-size: 0.8rem;
+}
+
+.close{
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  
+  .aside, .section {
+    width: 100vw;
+    height: auto;
+  }
+  
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .modal {
+    width: 95%;
+    left: 2.5%;
+    top: 15vh;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+}
